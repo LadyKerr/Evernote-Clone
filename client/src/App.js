@@ -15,12 +15,28 @@ class App extends React.Component {
     };
   }
 
+  deleteNote = (note) => {
+
+  }
+
+  selectNote = () => {
+
+  }
+
+  newNote = () => {
+
+  }
+
+
   render() {
     return (
       <div className="app-container">
         <SideBar
           selectedNoteIndex={this.state.selectedNoteIndex}
           notes={this.state.notes}
+          deleteNote={this.deleteNote}
+          selectNote={this.selectNote}
+          newNote={this.newNote}
         />
         <Editor />
       </div>
