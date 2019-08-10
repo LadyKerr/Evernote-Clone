@@ -31,8 +31,8 @@ class SideBar extends React.Component {
     console.log(this.state);
   };
 
-  selectNote = () => {
-    console.log("select note");
+  selectNote = (note, index) => {
+    this.props.selectNote(index, note);
   };
 
   deleteNote = () => {
@@ -66,12 +66,12 @@ class SideBar extends React.Component {
           ) : null}
 
           <List>
-            {notes.map(note => {
+            {notes.map((note, index) => {
               return (
-                <div key={note.id}>
+                <div key={index}>
                   <SidebarItem
                     note={note}
-                    index={note.id}
+                    index={index}
                     selectedNoteIndex={selectedNoteIndex}
                     selectNote={this.selectNote}
                     deleteNote={this.deleteNote}

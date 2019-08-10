@@ -15,18 +15,16 @@ class App extends React.Component {
     };
   }
 
-  deleteNote = (note) => {
+  deleteNote = note => {};
 
-  }
+  selectNote = (note, index) => {
+    this.setState({
+      selectedNoteIndex: index,
+      selectedNote: note
+    });
+  };
 
-  selectNote = () => {
-
-  }
-
-  newNote = () => {
-
-  }
-
+  newNote = () => {};
 
   render() {
     return (
